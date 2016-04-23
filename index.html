@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Visit Presentation</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Introduction to Numerical Methods and Control Theory</h2>
+				</section>
+								
+				<section>
+					<h3>Why Numerical Methods ?</h3>
+					When the requirement of solution is:
+					<ul>
+						<li>Local</li>
+						<li>Approximate</li>
+						<li>Closed-form solution is not possible</li>
+					</ul>
+					
+				</section>
+				
+				<section>
+					<h3>Precision vs Accuracy</h3>
+					<img src="./images/precision_accuracy.png" alt="Precision and Accuracy"></img>
+				</section>
+				
+				<section>
+					<h3>Errors</h3>
+					<p align="left">Absolute Error</p>
+					<img src="./images/absolute_error.png" alt="absolute_error"></img>
+					<p align="left">Relative Error</p>
+					<img src="./images/relative_error.png" alt="relative_error"></img>
+					<p align="left">Sources of Error</p>
+					<ul align="left">
+						<li>Rounding Error</li>
+						<li>Truncation Error</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Example</h3>
+					<p>Consider a sample differential equation:</p>
+					<img src="./images/differential_equation.png"></img>
+					<p> Analytical Solution is obvious.</p>
+				</section>
+				
+				<section>
+					<h3>Example</h3>
+					<p>Consider a sample differential equation:</p>
+					<img src="./images/differential_equation.png"></img>
+					<h4>Lets try Euler's Method</h4>
+					<p align="left"> We need two things:</p>
+					<ul>
+						<li>Starting point - y(0)</li>
+						<li>Step size - <i>h</i></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Example</h3>
+					<p>Consider a sample differential equation:</p>
+					<img src="images/differential_equation.png" width="20%"></img>
+					<h4>Lets try Euler's Method</h4>
+					<p align="left">Formula: </p>
+					<img src="images/euler_formula.png"></img>
+				</section>
+				
+				<section>
+					<h3>Euler's Method</h3>
+					<img src="images/euler_pseudocode.png" width="70%"></img>
+				</section>
+			
+				<section>
+					<h3>Control Systems</h3>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
